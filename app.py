@@ -74,7 +74,7 @@ options_casualty_class = ['Driver or rider', 'Pedestrian' 'Passenger']
 
 options_casualty_sex = ['Male', 'Female']
 
-options_casualty_age = ['31-50', '18-30', 'Under 18', 'Over 51' '5']
+options_casualty_age = ['31-50', '18-30', 'Under 18', 'Over 51']
 
 options_casualty_severity = ['3', '2', '1']
     
@@ -184,7 +184,7 @@ def main():
 
         pred = get_prediction(data=data, model=model)
 
-        st.write(f"The predicted sccident severity is:  {pred[0]}")
+        st.write(f"The predicted accident severity is:  {pred[0]}")
 
 if __name__ == '__main__':
     main()
