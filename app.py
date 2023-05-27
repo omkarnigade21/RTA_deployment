@@ -185,11 +185,11 @@ def main():
         pred = get_prediction(data=data, model=model)
         
         if pred[0]==1:
-              x='slight injury'
+              x='Slight injury'
         elif pred[0]==2:
-              x='serious injury'
+              x='Serious injury'
         else:
-              x='fatal injury'
+              x='Fatal injury'
 
         st.write(f"The predicted accident severity is:  {x}")
 
