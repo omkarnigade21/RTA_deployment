@@ -183,8 +183,15 @@ def main():
                          casualty_sex, casualty_age, casualty_severity, pedestrian_movement, cause]).reshape(1,-1)
 
         pred = get_prediction(data=data, model=model)
+        
+        if pred[0]==1:
+              x='slight injury'
+        elif pred[0]==2:
+              x='serious injury'
+        else:
+              x='fatal injury'
 
-        st.write(f"The predicted accident severity is:  {pred[0]}")
+        st.write(f"The predicted accident severity is:  {x}")
 
 if __name__ == '__main__':
     main()
